@@ -53,4 +53,4 @@ Projek ini adalah buatan Satriapande30 untuk melengkapi persyaratan tugas.
 
 ---
 
-Anda dapat menyalin konten di atas dan menyimpannya sebagai file `README.md` dalam repositori GitHub Anda. Pastikan untuk menggantikan `https://github.com/username/simulasi-antrian-python.git` dengan URL repositori Anda sendiri.
+Anda dapat menyalin konten di atas dan menyimpannya sebagai file `README.md` dalam repositori GitHub Anda. Pastikan untuk menggantikan `https://github.com/username/simulation-single-server-queue.git` dengan URL repositori Anda sendiri.
