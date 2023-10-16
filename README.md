@@ -32,7 +32,7 @@ Program ini menggunakan bahasa pemrograman Python untuk melakukan simulasi antri
 4. Jalankan program dengan perintah berikut:
    
     ```bash
-    python simulasi.py
+    python main.py
     ```
 
 5. Program akan meminta Anda untuk memasukkan jumlah pelanggan (1-n) yang akan disimulasikan. Masukkan angka yang sesuai dan tekan Enter.
