@@ -1,23 +1,20 @@
-# simulation-single-server-queue
-Untuk menjalankan program Python ini pada terminal, Anda perlu membuka terminal atau command prompt pada komputer Anda. Setelah itu, Anda perlu menavigasi ke direktori di mana file program Python ini disimpan.
+# Simulasi Antrian 1 Server
 
-Misalkan program ini disimpan dengan nama file queue_simulation.py dalam direktori tertentu. Berikut adalah langkah-langkah untuk menjalankan program tersebut di terminal:
 
-Buka terminal atau command prompt.
+Simulasi Antrian 1 Server adalah program sederhana yang mengilustrasikan bagaimana pelanggan tiba, mengantri, dan dilayani dalam suatu sistem antrian dengan satu server. Program ini ditulis menggunakan bahasa Python dan memberikan gambaran interaktiv mengenai alur waktu pelanggan di sistem.
 
-Navigasi ke direktori tempat Anda menyimpan file queue_simulation.py menggunakan perintah cd (change directory). Misalnya, jika file tersebut disimpan di direktori /path/to/directory/, Anda dapat mengetik:
+## Fitur
 
-bash
-Copy code
-cd /path/to/directory/
-Setelah Anda berada dalam direktori yang tepat, jalankan program Python dengan perintah berikut:
+- Menghasilkan interarrival time dan service time dengan probabilitas yang telah ditentukan.
+- Mensimulasikan antrian dengan satu server untuk sejumlah pelanggan tertentu.
+- Menghitung berbagai metrik termasuk waktu rata-rata antrean, probabilitas pelanggan dalam antrean, persentase waktu server tidak aktif, rata-rata waktu pelayanan, rata-rata panjang antrian bagi orang yang mengantri, dan rata-rata lama pelanggan di sistem.
 
-Copy code
-python queue_simulation.py
-Jika Anda menggunakan Python 3, gunakan perintah python3:
+## Penggunaan
 
-Copy code
-python3 queue_simulation.py
-Program akan meminta Anda untuk memasukkan jumlah pelanggan (1-100). Masukkan jumlah pelanggan yang ingin Anda uji, kemudian tekan Enter.
+1. Pastikan Anda memiliki Python terinstal di sistem Anda.
+2. Unduh atau clone repositori ini.
+3. Buka terminal dan arahkan ke direktori program.
+4. Jalankan program dengan perintah berikut:
 
-Program akan mulai melakukan simulasi antrian sesuai jumlah pelanggan yang Anda masukkan. Hasil simulasi akan ditampilkan di terminal.
+   ```bash
+   python simulation.py
