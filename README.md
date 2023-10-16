@@ -20,7 +20,7 @@ Program ini menggunakan bahasa pemrograman Python untuk melakukan simulasi antri
 2. Clone repositori ini ke komputer lokal Anda:
    
     ```bash
-    git clone https://github.com/username/simulation-single-server-queue.git
+    git clone https://github.com/satriapande30/simulation-single-server-queue.git
     ```
 
 3. Pindah ke direktori program:
@@ -35,7 +35,7 @@ Program ini menggunakan bahasa pemrograman Python untuk melakukan simulasi antri
     python simulasi.py
     ```
 
-5. Program akan meminta Anda untuk memasukkan jumlah pelanggan (1-100) yang akan disimulasikan. Masukkan angka yang sesuai dan tekan Enter.
+5. Program akan meminta Anda untuk memasukkan jumlah pelanggan (1-n) yang akan disimulasikan. Masukkan angka yang sesuai dan tekan Enter.
 
 6. Program akan menampilkan hasil simulasi dalam bentuk tabel.
 
@@ -53,4 +53,4 @@ Projek ini adalah buatan Satriapande30 untuk melengkapi persyaratan tugas.
 
 ---
 
-Anda dapat menyalin konten di atas dan menyimpannya sebagai file `README.md` dalam repositori GitHub Anda. Pastikan untuk menggantikan `https://github.com/username/simulation-single-server-queue.git` dengan URL repositori Anda sendiri.
+Anda dapat menyalin konten di atas dan menyimpannya sebagai file `README.md` dalam repositori GitHub Anda. Pastikan untuk menggantikan `https://github.com/satriapande30/simulation-single-server-queue.git` dengan URL repositori Anda sendiri.
