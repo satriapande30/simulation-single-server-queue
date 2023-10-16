@@ -1,27 +1,22 @@
 import random
+from prettytable import PrettyTable
 
 # Fungsi untuk menghasilkan interarrival time dengan probabilitas tertentu
 def generate_interarrival_time():
-    # Probabilitas dari interarrival time
     probabilities = [0.10, 0.20, 0.30, 0.25, 0.10, 0.05]
-    # Menghitung kumulatif probabilitas
     cumulative_probabilities = [sum(probabilities[:i+1]) for i in range(len(probabilities))]
     random_number = random.random()
     
-    # Menggunakan random number untuk memilih interarrival time sesuai probabilitas
     for i in range(len(cumulative_probabilities)):
         if random_number <= cumulative_probabilities[i]:
             return i + 1  # Interarrival time is 1-indexed
 
 # Fungsi untuk menghasilkan service time dengan probabilitas tertentu
 def generate_service_time():
-    # Probabilitas dari service time
     probabilities = [0.10, 0.20, 0.30, 0.25, 0.10, 0.05]
-    # Menghitung kumulatif probabilitas
     cumulative_probabilities = [sum(probabilities[:i+1]) for i in range(len(probabilities))]
     random_number = random.random()
     
-    # Menggunakan random number untuk memilih service time sesuai probabilitas
     for i in range(len(cumulative_probabilities)):
         if random_number <= cumulative_probabilities[i]:
             return i + 1  # Service time is 1-indexed
@@ -88,26 +83,61 @@ def simulate_queue(num_customers):
     # Menghitung rata-rata lama pelanggan di sistem
     average_time_in_system = total_time_in_system / num_customers
     
-    for i in range(num_customers):
-        print(f"Customer {i+1}:")
-        print(f"  Interarrival Time: {interarrival_times[i]}")
-        print(f"  Arrival Time: {arrival_times[i]}")
-        print(f"  Service Time: {service_times[i]}")
-        print(f"  Service Begin Time: {service_begin_times[i]}")
-        print(f"  Waiting Time in Queue: {waiting_times[i]}")
-        print(f"  Service End Time: {service_end_times[i]}")
-        print(f"  Time Spent in System: {time_in_system[i]}")
-        print()
+    # Menyimpan hasil simulasi dalam bentuk dictionary
+    simulation_results = {
+        "arrival_times": arrival_times,
+        "interarrival_times": interarrival_times,
+        "service_times": service_times,
+        "service_begin_times": service_begin_times,
+        "waiting_times": waiting_times,
+        "service_end_times": service_end_times,
+        "time_in_system": time_in_system,
+        "idle_time": idle_time,
+        "average_waiting_time": average_waiting_time,
+        "probability_customer_in_queue": probability_customer_in_queue,
+        "idle_percentage": idle_percentage,
+        "average_service_time": average_service_time,
+        "average_queue_length_per_customer": average_queue_length_per_customer,
+        "average_time_in_system": average_time_in_system
+    }
+    
+    return simulation_results
 
+# Fungsi untuk menampilkan hasil simulasi dalam bentuk tabel
+def display_results_table(simulation_results):
+    num_customers = len(simulation_results["arrival_times"])
+    
+    # Membuat objek tabel
+    table = PrettyTable()
+    
+    # Menambahkan kolom-kolom ke tabel
+    table.field_names = ["Customer", "Interarrival Time", "Arrival Time", "Service Time",
+                         "Service Begin Time", "Waiting Time in Queue", "Service End Time",
+                         "Time Spent in System"]
+    
+    # Mengisi data ke dalam tabel
+    for i in range(num_customers):
+        table.add_row([i + 1, simulation_results["interarrival_times"][i],
+                       simulation_results["arrival_times"][i], simulation_results["service_times"][i],
+                       simulation_results["service_begin_times"][i], simulation_results["waiting_times"][i],
+                       simulation_results["service_end_times"][i], simulation_results["time_in_system"][i]])
+    
+    # Menampilkan tabel
+    print(table)
+    
     # Menampilkan informasi tambahan
-    print(f"Total idle time of the server: {idle_time}")
-    print(f"Average Waiting Time in Queue: {average_waiting_time}")
-    print(f"Probability of a Customer in Queue: {probability_customer_in_queue}")
-    print(f"Idle Percentage: {idle_percentage}%")
-    print(f"Average Service Time: {average_service_time}")
-    print(f"Average Queue Length per Customer: {average_queue_length_per_customer}")
-    print(f"Average Time a Customer Spends in the System: {average_time_in_system}")
+    print(f"\nTotal idle time of the server: {simulation_results['idle_time']}")
+    print(f"Average Waiting Time in Queue: {simulation_results['average_waiting_time']}")
+    print(f"Probability of a Customer in Queue: {simulation_results['probability_customer_in_queue']}")
+    print(f"Idle Percentage: {simulation_results['idle_percentage']}%")
+    print(f"Average Service Time: {simulation_results['average_service_time']}")
+    print(f"Average Queue Length per Customer: {simulation_results['average_queue_length_per_customer']}")
+    print(f"Average Time a Customer Spends in the System: {simulation_results['average_time_in_system']}")
 
 if __name__ == "__main__":
     num_customers = int(input("Enter the number of customers (1-100): "))
-    simulate_queue(num_customers)
+    # Panggil fungsi untuk melakukan simulasi antrian
+    simulation_results = simulate_queue(num_customers)
+    
+    # Menampilkan hasil dalam bentuk tabel
+    display_results_table(simulation_results)
