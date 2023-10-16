@@ -1,20 +1,58 @@
-# Simulasi Antrian 1 Server
+# Simulasi Antrian dengan Python
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Simulasi Antrian 1 Server adalah program sederhana yang mengilustrasikan bagaimana pelanggan tiba, mengantri, dan dilayani dalam suatu sistem antrian dengan satu server. Program ini ditulis menggunakan bahasa Python dan memberikan gambaran interaktiv mengenai alur waktu pelanggan di sistem.
+Simulasi Antrian adalah program sederhana yang dibuat menggunakan Python untuk melakukan simulasi antrian dengan satu server. Program ini menghasilkan data simulasi seperti interarrival time, arrival time, service time, waiting time, dan lainnya, serta menampilkan hasilnya dalam bentuk tabel.
 
-## Fitur
+## Isi
 
-- Menghasilkan interarrival time dan service time dengan probabilitas yang telah ditentukan.
-- Mensimulasikan antrian dengan satu server untuk sejumlah pelanggan tertentu.
-- Menghitung berbagai metrik termasuk waktu rata-rata antrean, probabilitas pelanggan dalam antrean, persentase waktu server tidak aktif, rata-rata waktu pelayanan, rata-rata panjang antrian bagi orang yang mengantri, dan rata-rata lama pelanggan di sistem.
+- [Tentang Program](#tentang-program)
+- [Cara Menggunakan](#cara-menggunakan)
+- [Persyaratan](#persyaratan)
+- [Lisensi](#lisensi)
 
-## Penggunaan
+## Tentang Program
 
-1. Pastikan Anda memiliki Python terinstal di sistem Anda.
-2. Unduh atau clone repositori ini.
-3. Buka terminal dan arahkan ke direktori program.
+Program ini menggunakan bahasa pemrograman Python untuk melakukan simulasi antrian dengan satu server. Simulasi ini melibatkan sejumlah pelanggan dengan interarrival time dan service time yang dihasilkan berdasarkan probabilitas tertentu. Hasil simulasi termasuk interarrival time, arrival time, service time, waiting time, dan informasi lainnya yang ditampilkan dalam bentuk tabel.
+
+## Cara Menggunakan
+
+1. Pastikan Anda memiliki Python yang terinstal di komputer Anda. Jika belum, Anda dapat mengunduhnya dari [situs web resmi Python](https://www.python.org/).
+
+2. Clone repositori ini ke komputer lokal Anda:
+   
+    ```bash
+    git clone https://github.com/username/simulation-single-server-queue.git
+    ```
+
+3. Pindah ke direktori program:
+   
+    ```bash
+    cd simulation-single-server-queue
+    ```
+
 4. Jalankan program dengan perintah berikut:
+   
+    ```bash
+    python simulasi.py
+    ```
 
-   ```bash
-   python simulasi.py
+5. Program akan meminta Anda untuk memasukkan jumlah pelanggan (1-100) yang akan disimulasikan. Masukkan angka yang sesuai dan tekan Enter.
+
+6. Program akan menampilkan hasil simulasi dalam bentuk tabel.
+
+## Persyaratan
+
+- Python 3.x
+- Modul PrettyTable (untuk menampilkan hasil dalam bentuk tabel):
+    ```bash
+    pip install prettytable
+    ```
+
+## Lisensi
+
+Projek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detailnya.
+
+---
+
+Anda dapat menyalin konten di atas dan menyimpannya sebagai file `README.md` dalam repositori GitHub Anda. Pastikan untuk menggantikan `https://github.com/username/simulasi-antrian-python.git` dengan URL repositori Anda sendiri.
