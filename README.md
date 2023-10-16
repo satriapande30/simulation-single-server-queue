@@ -1,7 +1,5 @@
 # Simulasi Antrian dengan Python
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-
 Simulasi Antrian adalah program sederhana yang dibuat menggunakan Python untuk melakukan simulasi antrian dengan satu server. Program ini menghasilkan data simulasi seperti interarrival time, arrival time, service time, waiting time, dan lainnya, serta menampilkan hasilnya dalam bentuk tabel.
 
 ## Isi
@@ -51,7 +49,7 @@ Program ini menggunakan bahasa pemrograman Python untuk melakukan simulasi antri
 
 ## Lisensi
 
-Projek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detailnya.
+Projek ini adalah buatan Satriapande30 untuk melengkapi persyaratan tugas.
 
 ---
 
