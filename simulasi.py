@@ -28,7 +28,6 @@ def generate_service_time():
 
 # Fungsi untuk melakukan simulasi antrian
 def simulate_queue(num_customers):
-    # Inisialisasi list untuk menyimpan data simulasi
     arrival_times = []
     interarrival_times = []
     service_times = []
@@ -66,6 +65,29 @@ def simulate_queue(num_customers):
         service_end_times.append(service_end_time)
         time_in_system.append(service_end_time - arrival_times[i])
     
+    # Menghitung total waktu antrean, total waktu pelayanan, dan total waktu di sistem
+    total_waiting_time = sum(waiting_times)
+    total_service_time = sum(service_times)
+    total_time_in_system = sum(time_in_system)
+    
+    # Menghitung rata-rata waktu antrean
+    average_waiting_time = total_waiting_time / num_customers
+    
+    # Menghitung probabilitas pelanggan dalam antrean
+    probability_customer_in_queue = total_waiting_time / (total_service_time + total_waiting_time)
+    
+    # Menghitung persentase waktu server tidak aktif (idle)
+    idle_percentage = (idle_time / service_end_times[-1]) * 100
+    
+    # Menghitung rata-rata waktu pelayanan
+    average_service_time = total_service_time / num_customers
+    
+    # Menghitung rata-rata panjang antrian bagi orang yang mengantri
+    average_queue_length_per_customer = total_waiting_time / num_customers
+    
+    # Menghitung rata-rata lama pelanggan di sistem
+    average_time_in_system = total_time_in_system / num_customers
+    
     for i in range(num_customers):
         print(f"Customer {i+1}:")
         print(f"  Interarrival Time: {interarrival_times[i]}")
@@ -77,10 +99,15 @@ def simulate_queue(num_customers):
         print(f"  Time Spent in System: {time_in_system[i]}")
         print()
 
+    # Menampilkan informasi tambahan
     print(f"Total idle time of the server: {idle_time}")
+    print(f"Average Waiting Time in Queue: {average_waiting_time}")
+    print(f"Probability of a Customer in Queue: {probability_customer_in_queue}")
+    print(f"Idle Percentage: {idle_percentage}%")
+    print(f"Average Service Time: {average_service_time}")
+    print(f"Average Queue Length per Customer: {average_queue_length_per_customer}")
+    print(f"Average Time a Customer Spends in the System: {average_time_in_system}")
 
 if __name__ == "__main__":
-    # Meminta input jumlah pelanggan
     num_customers = int(input("Enter the number of customers (1-100): "))
-    # Memanggil fungsi untuk melakukan simulasi antrian
     simulate_queue(num_customers)
