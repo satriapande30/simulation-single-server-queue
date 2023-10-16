@@ -17,4 +17,4 @@ Simulasi Antrian 1 Server adalah program sederhana yang mengilustrasikan bagaima
 4. Jalankan program dengan perintah berikut:
 
    ```bash
-   python simulation.py
+   python simulasi.py
